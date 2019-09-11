@@ -56,14 +56,15 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'jquery-rails'
-  gem 'popper_js', '~> 1.11.1'
-  gem 'bootstrap', '4.0.0.alpha6'
+  
+end
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.3.3'
-end
-end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'jquery-rails'
+gem 'popper_js', '~> 1.11.1'
+gem 'bootstrap', '4.0.0.alpha6'
+source 'https://rails-assets.org' do
+gem 'rails-assets-tether', '>= 1.3.3'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+end
