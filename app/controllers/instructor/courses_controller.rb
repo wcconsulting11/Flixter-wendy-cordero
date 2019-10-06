@@ -8,6 +8,7 @@ class Instructor::CoursesController < ApplicationController
 
   def create
     @course = current_user.courses.create(course_params)
+       @course.image.create(image_params.merge(user: current_user))
     if @course.valid?
       redirect_to instructor_course_path(@course)
     else
@@ -32,6 +33,6 @@ class Instructor::CoursesController < ApplicationController
   end
 
   def course_params
-    params.require(:course).permit(:title, :description, :cost)
+    params.require(:course).permit(:title, :image, :description, :cost)
   end
 end
