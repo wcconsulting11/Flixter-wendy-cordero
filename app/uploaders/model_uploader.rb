@@ -1,11 +1,23 @@
-class ImageUploader < CarrierWave::Uploader::Base
+class ModelUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
   include CarrierWave::MiniMagick
+  process :resize_to_fit => [200, 200]
+  process :radial_blur => 10
+
+  def radial_blur(amount)
+    manipulate! do |img|
+      img.radial_blur(amount)
+      img = yield(img) if block_given?
+      img
+    end
+    
+  end
+
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  #storage :file
   #storage :fog
+   storage :aws
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -23,7 +35,6 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process scale: [200, 300]
-  process resize_to_fill: [800, 350]
   #
   # def scale(width, height)
   #   # do something

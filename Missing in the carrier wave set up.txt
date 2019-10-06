@@ -1,0 +1,11 @@
+Need to add this I think to the form page:
+<%= form.file_field :images, multiple: true %>
+
+Need to run 
+figaro heroku:set -e production
+
+to add to heroku environments
+
+
+Missing the application.yml
+
