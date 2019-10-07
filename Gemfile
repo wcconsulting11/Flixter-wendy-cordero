@@ -75,6 +75,8 @@ gem 'stripe'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
 gem 'ranked-model'
+gem "font-awesome-rails"
+gem 'colorize', '~> 0.8.1'
 source 'https://rails-assets.org' do
 gem 'rails-assets-tether', '>= 1.3.3'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
