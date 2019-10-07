@@ -72,6 +72,9 @@ gem 'fog-aws'
 gem "mini_magick"
 gem 'carrierwave-aws'
 gem 'stripe'
+gem 'ranked-model'
+gem 'jquery-ui-rails'
+gem 'ranked-model'
 source 'https://rails-assets.org' do
 gem 'rails-assets-tether', '>= 1.3.3'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
