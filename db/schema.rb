@@ -1,4 +1,4 @@
-  # This file is auto-generated from the current state of the database. Instead
+# This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 2019_10_07_033933) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "video"
+    t.integer "row_order"
     t.index ["row_order"], name: "index_lessons_on_row_order"
-    t.index ["section_order"], name: "index_lessons_on_row_order"
   end
 
   create_table "models", force: :cascade do |t|
@@ -70,8 +70,8 @@ ActiveRecord::Schema.define(version: 2019_10_07_033933) do
     t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_sections_on_course_id"
-    t.index ["row_order"], name: "index_sections_on_rank_order"
+    t.integer "rank_order"
+    t.index ["rank_order"], name: "index_sections_on_rank_order"
   end
 
   create_table "users", force: :cascade do |t|
