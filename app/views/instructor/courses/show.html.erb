@@ -106,15 +106,15 @@
       <div class="modal-body">
         <%= f.input :title %>
         <br />
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f.submit "Add a section", class: 'btn btn-primary' %>
+        </div>
         <br />
         <br />
        <% end %>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <%= f.submit "Add a section", class: 'btn btn-primary' %>
-      </div>
+      
     </div>
   </div>
 </div>
@@ -136,15 +136,15 @@
           <%= f.input :subtitle %>
           <%= f.input :video %>
           <br />
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <%= f.submit "Add the lesson", class: 'btn btn-primary' %>
+          </div>
           <br />
           <br />
       </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <%= f.submit "Add the lesson", class: 'btn btn-primary' %>
-      </div>
+      
       <% end %>
     </div>
   </div>

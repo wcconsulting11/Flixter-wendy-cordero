@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2019_10_07_033933) do
     t.string "video"
     t.integer "row_order"
     t.index ["row_order"], name: "index_lessons_on_row_order"
+    t.index ["section_id"], name: "index_lessons_on_section_id"
   end
 
   create_table "models", force: :cascade do |t|
@@ -70,8 +71,9 @@ ActiveRecord::Schema.define(version: 2019_10_07_033933) do
     t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "rank_order"
-    t.index ["rank_order"], name: "index_sections_on_rank_order"
+    t.integer "row_order"
+    t.index ["course_id"], name: "index_sections_on_course_id"
+    t.index ["row_order"], name: "index_sections_on_row_order"
   end
 
   create_table "users", force: :cascade do |t|
