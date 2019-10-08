@@ -33,16 +33,13 @@
 <br />
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center"><%= current_course.title %></h1>
-  <%= image_tag current_course.image.to_s, class: 'img-fluid' %> 
-  
-   <div class="text-center">
-   <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
+   <%= image_tag current_course.image.to_s, class: 'img-fluid' %> 
+     <div class="text-center">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
       Add a new section...
-    </button>
-    </div>
-
-  
+     </button>
+     </div>
 
    <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
@@ -51,15 +48,14 @@
       <span class="fa fa-ellipsis-v"></span>
       <%= section.title %>
     </div>
+    </div>
 
    <!-- Button trigger modal -->
    <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
    New Lessons...
    </button>
-    
     <br class="clr" />
     <br class="clr" /> 
-
     <ul class="lessons">
     <% section.lessons.rank(:row_order).each do |lesson| %>
       <li data-update-url="<%= instructor_lesson_path(lesson) %>">
@@ -77,6 +73,7 @@
         <%= lesson.subtitle %>
        </p>
         </div>
+        </div>
       </div>
       </li>
       <br class="clr" />
@@ -84,7 +81,7 @@
     </ul>
     <br class="clr" />
   </li>
-  <% end %>
+<% end %>
   </ul>
 
 </div>
@@ -108,7 +105,7 @@
         <%= f.submit "Add a section", class: 'btn btn-primary' %>
         <br />
         <br />
-      <% end %>
+       <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -117,9 +114,8 @@
       <% end %>
     </div>
   </div>
-  </div>
+</div>
 
- 
 
 <!-- Modal -->
 <div class="modal fade" id="newLessonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -140,13 +136,12 @@
           <%= f.submit "Add the lesson", class: 'btn btn-primary' %>
           <br />
           <br />
-        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f.submit "Add the lesson", class: 'btn btn-primary' %>
       </div>
-      <% end %>
     </div>
   </div>
 </div>
+<% end %>
