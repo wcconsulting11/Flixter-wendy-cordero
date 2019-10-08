@@ -93,7 +93,7 @@
  
   
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="newSectionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -103,19 +103,18 @@
         <h4 class="modal-title" id="newSectionModalLabel">a new section</h4>
       </div>
        <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
-      <div class="modal-body">
+        <div class="modal-body">
         <%= f.input :title %>
+        </div>
         <br />
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f.submit "Add a section", class: 'btn btn-primary' %>
         </div>
         <br />
-        <br />
-       <% end %>
+        <br /> 
+        <% end %>
       </div>
-      
-    </div>
   </div>
 </div>
 
@@ -143,9 +142,7 @@
           <br />
           <br />
       </div>
-
-      
+      </div>
       <% end %>
-    </div>
   </div>
 </div>
