@@ -1,9 +1,9 @@
 <script>
   $(function() {
-    $('.newLessonForm').attr('action', lessonUrl);
-     var lessonUrl = $( event.target).data('lesson-url');
+    $('.new-lesson-button').click(function( event ) {
+      var lessonUrl = $( event.target).data('lesson-url');
+      $('#newLessonForm').attr('action', lessonUrl);
     });
-
     $('.lessons').sortable({
       update: function( event, ui ) {
         $.ajax({
@@ -12,12 +12,8 @@
           dataType: 'json',
           data: { lesson: { row_order_position: ui.item.index() } }
         });
-      } 
+      }
     });
-  });
-</script>
-<script>
-  $(function() {
     $('.sections').sortable({
       update: function( event, ui ) {
         $.ajax({
@@ -26,7 +22,7 @@
           dataType: 'json',
           data: { section: { row_order_position: ui.item.index() } }
         });
-      } 
+      }
     });
   });
 </script>
@@ -84,9 +80,9 @@
       <% end %>
     </ul>
     <br class="clr" />
-  </li>
-<% end %>
-  </ul>
+    </li>
+    <% end %>
+    </ul>
 
 </div>
 
