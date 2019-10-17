@@ -11,6 +11,7 @@
  <% if current_user && current_user == @course.user %>
     <br />
     <br />
+    <h1>testing</h1>
     <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
  <% end %>
  <br />
@@ -47,7 +48,7 @@
         <div class="row">
         <% section.lessons.rank(:row_order).each do |lesson| %>
         <div class="col-12 col-sm-6">
-          <div class="lesson">
+          <div class="lesson text-center">
           <br />
              <%= link_to lesson_path(lesson) do %>
               <b><%= lesson.title %></b>

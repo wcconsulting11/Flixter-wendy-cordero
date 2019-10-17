@@ -18,7 +18,7 @@ body{
     position: relative;
     width: 100%;
     min-height: 100%;
-    background-color: rgba(36, 32, 33, 0.9);
+    background-color: rgb(10, 51, 10) !important;
     color: white;
     font-family:"Helvetica Neue", Helvetica;
     padding: 10px 0px;
@@ -34,8 +34,10 @@ body{
 
 .social-button {
     margin: 4px;
-  }
+    font-size: 45px;
+    color: rgb(255, 255, 255) !important;
+}
 
-  .social a:hover {
+.social a:hover {
     text-decoration: none;
-  }
+}

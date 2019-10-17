@@ -13,7 +13,7 @@ def current_lesson
 end
 
 def require_enrollment_for_current_lesson
-  if !current_user.enrolled_in?(current_lesson.section.course)
+  if !current_user.enrolled_in?(current_lesson.section.course) && current_lesson.section.course.user != current_user
     redirect_to course_path(current_lesson.section.course), alert: "You must be enrolled to view this lesson."
   end
 end

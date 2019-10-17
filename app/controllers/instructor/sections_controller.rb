@@ -24,7 +24,12 @@ class Instructor::SectionsController < ApplicationController
 
 
   def current_section
-    @current_section ||= Section.find(params[:id])
+	if params[:id] and not params[:section_id] then
+		sid = params[:id]
+	else
+		sid = params[:section_id]
+	end
+    @current_section ||= Section.find(sid)
   end
 
   def require_authorized_for_current_course
@@ -36,10 +41,11 @@ class Instructor::SectionsController < ApplicationController
 
   helper_method :current_course
   def current_course
+	
     @current_course ||= Course.find(params[:course_id])
   end
 
   def section_params
-    params.require(:section).permit(:title, :image, :description, :rank_order_position)
+    params.require(:section).permit(:title, :image, :description, :row_order_position)
   end
 end

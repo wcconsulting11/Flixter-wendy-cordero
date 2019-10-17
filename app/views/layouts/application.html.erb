@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="http://vjs.zencdn.net/5.12.6/video-js.css" rel="stylesheet">
+
   </head>
 
   <body>
@@ -45,10 +46,7 @@
 	    <% end %>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    
   </div>
 </nav>
 
@@ -75,16 +73,20 @@
         <%= link_to 'My Dashboard', dashboard_path %>
       </div>
       <div class="col-12 col-sm-3">
-        <b>About</b>
+        
+        <%= link_to 'About', about_path %>
         <br />
-        <%= link_to 'Team', '#' %>
+        
+        <%= link_to 'Team', team_path %>
         <br />
-        <%= link_to 'Careers', '#' %>
+        
+        <%= link_to 'Career', career_path %>
         <br />
         <%= link_to 'Privacy Policy', privacy_path %>
       </div>
       <div class="col-12 col-sm-3">
-        <b>Contact</b>
+        
+        <%= link_to 'Contact', contact_path %>
         <br />
         Support@WLCBusinessConsulting
         </div>
@@ -92,11 +94,13 @@
         <b>Social</b>
         <br />
         <br />
-       <%= link_to 'http://github.com/wcconsulting11' do %>
-        <span class="fa fa-github-square fa-2x social-button"></span>
+        <%= link_to 'http://github.com/wcconsulting11' do %>
+        <%# <span class="fas fa-github-square fa-2x social-button"></span> %>
+        <span class="social-button"><i class="fab fa-github-square"></i></span>
        <% end %>
-       <%= link_to 'https://www.linkedin.com/in/wendy-c-193a441a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Br2%2BvgflgTzqLgW6FYPWQNA%3D%3D' do %>
-       <span class="fa fa-Linkedin-square fa-2x social-button"></span>
+       <%= link_to 'https://linkedin.com/in/wendy-c-193a441a' do %>
+       <%# <span class="fas fa-Linkedin-square fa-2x social-button"></span> %>
+       <span class="social-button"><i class="fab fa-linkedin"></i></span>
        <% end %>
        </div>
     </div>
@@ -105,5 +109,6 @@
 
 <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
 <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+<script src="https://kit.fontawesome.com/fb3fb8fb4b.js" crossorigin="anonymous"></script>
 </body>
 </html>

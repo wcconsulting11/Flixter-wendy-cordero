@@ -31,7 +31,7 @@ before_action :authenticate_user!
 
  private
 
- def current_course
-  @current_course ||= Course.find(params[:course_id])
- end   
+  def current_course
+    @current_course ||= Course.find(params[:course_id])
+  end   
 end

@@ -6,10 +6,13 @@ margin: 0;
 padding: 0;
 }
 
+.navbar-inverse{
+  background-color: rgb(10, 51, 10) !important;
+}
 
 .booyah-box {
--moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
--webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+-moz-box-shadow: 1px 1px 2px 0 #0b754c;
+-webkit-box-shadow: 1px 1px 2px 0 #034635;
 box-shadow: 1px 1px 2px 0 #d0d0d0;
 background: #fff;
 border: 1px solid #ccc;
@@ -43,19 +46,20 @@ color: white;
 .frosty h1 {
 font-family: "Helvetica Neue", Helvetica;
 font-weight: 100;
-text-shadow: rgba(0,0,0,0.95) 1px, 1px;
+text-shadow: rgba(237, 243, 241, 0.95) 1px, 1px;
 }
 
 
 .frosty h2 {
 font-family: "Helvetica Neue", Helvetica;
 font-weight: 200;
-text-shadow: rgba(0,0,0,0.95) 1px, 1px;
+text-shadow: rgba(240, 245, 243, 0.95) 1px, 1px;
 }    
 
 
 .btn {
 border-radius: 0;
+background-color: green;
 }
 
 

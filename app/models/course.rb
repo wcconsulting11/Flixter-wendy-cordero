@@ -1,6 +1,7 @@
 class Course < ApplicationRecord
     mount_uploader :image, ImageUploader
     belongs_to :user
+    belongs_to :instructor, class_name: 'User'
     has_many :sections
     has_many :enrollments
     
