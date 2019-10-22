@@ -26,14 +26,14 @@ padding: 0;
     background-color: rgb(10, 51, 10) !important;
 }
 .booyah-box {
--moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
--webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-box-shadow: 1px 1px 2px 0 #d0d0d0;
-background: #fff;
-border: 1px solid #ccc;
-border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-padding: 10px;
-}
+    -moz-box-shadow: 1px 1px 2px 0 #0b754c;
+    -webkit-box-shadow: 1px 1px 2px 0 #034635;
+    box-shadow: 1px 1px 2px 0 #d0d0d0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+    padding: 10px;
+     }
 
 
 .booyah-box h2, .booyah-box h1 {
@@ -70,9 +70,9 @@ text-shadow: rgba(0,0,0,0.95) 1px, 1px;
 } 
 
 .btn {
-border-radius: 0;
-}
-
+    border-radius: 0;
+    background-color: green;
+    }
 
 body {
 background: image_url('interlaced.png');
@@ -101,3 +101,88 @@ width: 100%;
 padding-left: 5%;
 padding-right: 5%;
 }
+
+
+help-block {
+    color: #ff3333;
+    background-color: #FFEEEE;
+    border-radius: 3px;
+    padding: 2px 8px 2px 8px;
+    margin: 10px;
+  }
+
+  .clr{
+      clear: both;
+  }
+
+  .lesson {
+    background-color: black;
+    margin-top: 10px;
+    height: 130px;
+  }
+
+  .lessons li {
+    background: black;
+    color: white;
+    margin: 10px;
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 100;
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .lessons li b {
+    font-size: 25px;
+    font-weight: 100;
+  }
+
+  .lessons li p {
+    margin: 0;
+  }
+
+  .section {
+    border: 1px solid;
+    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+    padding: 20px;
+  }
+
+  .section-li {
+    border: 1px solid;
+    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .lesson a {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 100;
+    font-size: 15px;
+  }
+
+  .lesson a b {
+    font-weight: 100;
+    font-size: 25px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  ul .header {
+    font-size: 25px;
+  }
+
+  ul .header .fa {
+    font-size: 20px;
+  }
+
+  .my-video{
+    width: 200px;
+    height: 100px;
+  }
+
+  .img-fluid{
+      width: 100px;
+      height: 75px;
+  }
